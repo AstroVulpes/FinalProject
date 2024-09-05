@@ -1,0 +1,31 @@
+﻿@model IEnumerable<FinalProject.Models.Movie>
+
+@{
+	ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>	
+    @if (User.Identity.IsAuthenticated) // Check if the user is authenticated
+    {
+        <a asp-action="Create">Create New</a>
+    }
+    else
+    {
+    <p>Please <a href="/Account/Login">log in</a> to create a movie page.</p>
+    }
+</p>
+<div>
+    <div class="grid-container grid-container--fit">
+        @foreach (var item in Model)
+        {
+            <div class="grid-element">
+                <a asp-action="Details" asp-route-id="@item.Id" class="button-link">
+                    <img src="@Url.Content("~/uploads/" + item.ThumbnailName)" alt="@Html.DisplayFor(modelItem => item.Title)" style="max-width: 200px; max-height: 200px;" />
+                    <br /><i>@Html.DisplayFor(modelItem => item.Title)</i>
+                </a>
+            </div>
+        }
+    </div>
+</div>
