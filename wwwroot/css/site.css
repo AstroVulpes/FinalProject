@@ -1,0 +1,71 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.full-cover {
+    position: fixed; /* Fixed positioning */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the whole area */
+    z-index: -1; /* Send it to the back */
+    filter: blur(1px);
+}
+
+.bluetext {
+    color: powderblue;
+}
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+.text-border {
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, .5), /* shadow to the right and down */
+    -1px -1px 0px rgba(0, 0, 0, .5), /* shadow to the left and up */
+    1px -1px 0px rgba(0, 0, 0, .5), /* shadow to the right and up */
+    -1px 1px 0px rgba(0, 0, 0, .5); /* shadow to the left and down */
+}
+
+.grid-container {
+    display: grid;
+}
+
+.grid-container--fit {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.grid-element {
+    font-optical-sizing: auto;
+}
+
+.button-link {
+    display: block; /* Allow the anchor to take up the full width */
+    text-align: center; /* Center contents */
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit text color */
+}
+
+    .button-link:hover img {
+        opacity: 0.8; /* Optional: Change image opacity on hover */
+    }
